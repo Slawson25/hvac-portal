@@ -48,10 +48,10 @@ function SignIn({ onLogin }) {
         </form>
       </div>
 
-      <div style={{ width: '100%', maxWidth: '320px', margin: '16px 0 0 0', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', textAlign: 'center', fontSize: '13px', color: '#6c757d', boxSizing: 'border-box' }}>
+      <div style={{ width: '100%', maxWidth: '32rem', margin: '80px 0 0 0', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', textAlign: 'center', fontSize: '1em', color: '#6c757d', boxSizing: 'border-box' }}>
         <p style={{ margin: '0 0 4px 0', fontWeight: 'bold', color: '#495057' }}>Need Support?</p>
         <p style={{ margin: 0 }}>Dispatch Hotline: <strong>(800) 555-HVAC</strong></p>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginTop: '10px', fontSize: '11px', color: '#28a745', fontWeight: 'bold' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginTop: '10px', fontSize: '.8em', color: '#28a745', fontWeight: 'bold' }}>
           <span style={{ height: '7px', width: '7px', backgroundColor: '#28a745', borderRadius: '50%', display: 'inline-block' }}></span>
           Portal Status: Operational
         </div>
