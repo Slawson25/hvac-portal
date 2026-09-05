@@ -1,16 +1,42 @@
 import React, { useState } from 'react';
 import ServiceCard from './components/ServiceCard';
 import SignIn from './components/SignIn';
+import hvacLogo from './assets/custom-HVAC.png';
 
 function App() {
   const [currentTech, setCurrentTech] = useState(null);
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', color: '#333', maxWidth: '600px', margin: '0 auto' }}>
-      <header style={{ borderBottom: '2px solid #eee', paddingBottom: '10px', marginBottom: '20px' }}>
+    <div style={{ 
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      padding: '20px', 
+      fontFamily: 'Arial, sans-serif', 
+      color: '#333', 
+      maxWidth: '600px', 
+      margin: '0 auto', 
+      boxSizing: 'border-box'
+      }}>
+
+      <header style={{ 
+    borderBottom: 'none', 
+    paddingBottom: '0px', 
+    marginBottom: '-270px', 
+    textAlign: 'center' 
+  }}>
         <h1>HVAC Service Portal</h1>
         <p class='title'>Manage customer calls, equipment status, and service tickets.</p>
         
+        <img src={hvacLogo} 
+          alt="SunShine HVAC Logo" 
+          style={{
+          width: '320px', 
+          height: 'auto', 
+          diplay: 'block',
+          margin: '155px auto', 
+          borderRadius: '8px'}}/>
         
         {currentTech && (
           <p style={{ color: '#0275d8', fontWeight: 'bold' }}>
