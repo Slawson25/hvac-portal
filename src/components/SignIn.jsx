@@ -38,7 +38,7 @@ function SignIn({ onLogin }) {
               maxLength="4"
               value={techId}
               onChange={(e) => setTechId(e.target.value)}
-              placeholder="••••"
+              placeholder="Enter Id"
               style={{ width: '100%', padding: '10px', fontSize: '18px', textAlign: 'center', letterSpacing: '4px', boxSizing: 'border-box' }}
             />
           </div>
