@@ -1,6 +1,15 @@
 import ServiceCard from '../components/ServiceCard';
+import { useNavigate } from 'react-router-dom';
 
 function ServiceTickets({ currentTech, onSignOut }) {
+
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        onSignOut();
+        navigate('/');
+    }
+
   return (
     <div style={{ textAlign: 'center' }}>
 
@@ -21,7 +30,7 @@ function ServiceTickets({ currentTech, onSignOut }) {
       />
 
       <button
-        onClick={onSignOut}
+        onClick={handleSignOut}
         style={{
           marginTop: '20px',
           padding: '8px 16px',

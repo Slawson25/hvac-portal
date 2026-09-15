@@ -1,7 +1,15 @@
 import SignIn from '../components/SignIn';
 import hvacLogo from '../assets/custom-HVAC.png';
+import { useNavigate } from 'react-router-dom';
 
 function Login({ onLogin }) {
+  const navigate = useNavigate();
+
+  const handleLogin = (tech) => {
+    onLogin(tech);
+    navigate('/tickets');
+  };
+
   return (
     <div style={{ textAlign: 'center' }}>
 
@@ -23,7 +31,7 @@ function Login({ onLogin }) {
         }}
       />
 
-      <SignIn onLogin={onLogin} />
+      <SignIn onLogin={handleLogin} />
 
     </div>
   );
