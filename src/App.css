@@ -1,1 +1,41 @@
 
+
+/* Desktop / Base Styles */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 👈 Fixed invalid property syntax */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.portal-logo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 24px auto 24px auto; /* 👈 Added 24px bottom margin to force space between logo and sign-in box */
+  border-radius: 8px;
+}
+
+/* 📱 Mobile Responsive View (Screens 600px wide or smaller) */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 12px;
+  }
+
+  .portal-logo {
+    width: 80%;
+    max-width: 280px;
+    margin: 16px auto 16px auto; /* 👈 Keeps 'auto' left/right centering active on mobile */
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import hvacLogo from '../assets/custom-HVAC.png';
 
 const AUTHORIZED_TECHS = [
-  { id: '1129', name: 'Shawn Lawson'},
+    { id: '1129', name: 'Shawn Lawson'},
     { id: '1220', name: 'Heather Lawson'},
     { id: '1105', name: 'Ethan Lawson'},
     { id: '0924', name: 'Autumn Lawson'},
