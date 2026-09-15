@@ -17,7 +17,7 @@ function ServiceTickets({ currentTech, onSignOut }) {
       unitType: 'Goodman 4-Ton Split System',
       issue: 'No cooling - R-410A Leak Detected',
       status: 'Pending',
-      assignedTechId: 1129
+      assignedTechId: '1129'
     },
     {
       id: 102,
@@ -25,7 +25,7 @@ function ServiceTickets({ currentTech, onSignOut }) {
       unitType: 'Carrier Rooftop Package Unit',
       issue: 'Capacitor replacement & maintenance',
       status: 'Completed',
-      assignedTechId: 1105
+      assignedTechId: '1105'
     },
     {
       id: 103,
@@ -33,7 +33,7 @@ function ServiceTickets({ currentTech, onSignOut }) {
       unitType: 'Trane 5-Ton Package Unit',
       issue: 'Unit not starting',
       status: 'Pending',
-      assignedTechId: 1220
+      assignedTechId: '1220'
     }
   ];
 
