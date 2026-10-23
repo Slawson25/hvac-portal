@@ -34,6 +34,14 @@ function ServiceTickets({ currentTech, onSignOut }) {
       issue: 'Unit not starting',
       status: 'Pending',
       assignedTechId: '1220'
+    },
+    {
+      id:104,
+      customer: 'Disney Animal Lodge',
+      unitType: 'Window Unit',
+      issue: 'not cooling, humming sound',
+      status: 'Completed',
+      assignedTechId: '1129'
     }
   ];
 
