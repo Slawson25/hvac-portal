@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import hvacLogo from '../assets/custom-HVAC.png';
 
 const AUTHORIZED_TECHS = [
-    { id: '1129', name: 'Shawn Lawson'},
-    { id: '1220', name: 'Heather Lawson'},
-    { id: '1105', name: 'Ethan Lawson'},
-    { id: '0924', name: 'Autumn Lawson'},
-    { id: '0612', name: 'Paislee Lawson'},
-    { id: '0214', name: 'Thayer Lawson'}
+    { id: '1129', name: 'Shawn Lawson' },
+    { id: '1220', name: 'Heather Lawson' },
+    { id: '1105', name: 'Ethan Lawson' },
+    { id: '0924', name: 'Autumn Lawson' },
+    { id: '0612', name: 'Paislee Lawson' },
+    { id: '0214', name: 'Thayer Lawson' }
 ];
 
 function SignIn({ onLogin }) {
@@ -24,13 +23,13 @@ function SignIn({ onLogin }) {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+    <div className="flex flex-col items-center justify-center w-full">
       {/* Sign In Card */}
-      <div style={{ width: '100%', maxWidth: '320px', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', backgroundColor: '#fff', border: '1px solid #ddd', textAlign: 'center' }}>
-        <h2 class ='subtitle'style={{ marginTop: 0 }}>Technician Access</h2>
+      <div className="w-full max-w-sm bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 shadow-2xl text-center">
+        <h2 className="text-xl font-bold mb-4 text-white">Technician Access</h2>
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '16px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold', textAlign: 'left' }}>
+          <div className="mb-4 text-center">
+            <label className="block mb-2 text-sm font-medium text-slate-200">
               Enter 4-Digit Tech ID:
             </label>
             <input
@@ -38,21 +37,25 @@ function SignIn({ onLogin }) {
               maxLength="4"
               value={techId}
               onChange={(e) => setTechId(e.target.value)}
-              placeholder="Enter Id"
-              style={{ width: '100%', padding: '10px', fontSize: '18px', textAlign: 'center', letterSpacing: '4px', boxSizing: 'border-box' }}
+              placeholder="••••"
+              className="w-full px-4 py-3 bg-slate-950/60 border border-slate-700/80 rounded-xl text-white text-center text-xl tracking-widest placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#0275d8', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>
+          <button 
+            type="submit" 
+            className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition duration-200 shadow-lg shadow-blue-500/20 cursor-pointer"
+          >
             Sign In
           </button> 
         </form>
       </div>
 
-      <div style={{ width: '100%', maxWidth: '32rem', margin: '80px 0 0 0', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', textAlign: 'center', fontSize: '1em', color: '#6c757d', boxSizing: 'border-box' }}>
-        <p style={{ margin: '0 0 4px 0', fontWeight: 'bold', color: '#495057' }}>Need Support?</p>
-        <p style={{ margin: 0 }}>Dispatch Hotline: <strong>(800) 555-HVAC</strong></p>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', marginTop: '10px', fontSize: '.8em', color: '#28a745', fontWeight: 'bold' }}>
-          <span style={{ height: '7px', width: '7px', backgroundColor: '#28a745', borderRadius: '50%', display: 'inline-block' }}></span>
+      {/* Support Card */}
+      <div className="w-full max-w-sm mt-8 p-4 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl text-center text-slate-400 text-xs">
+        <p className="font-semibold text-slate-300 mb-1">Need Support?</p>
+        <p className="mb-2">Dispatch Hotline: <strong className="text-slate-200">(800) 555-HVAC</strong></p>
+        <div className="flex items-center justify-center gap-2 text-emerald-400 font-medium">
+          <span className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse"></span>
           Portal Status: Operational
         </div>
       </div>

@@ -11,14 +11,14 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col justify-between items-center p-6 text-slate-100">
+    <div className="min-h-screen bg-slate-950 flex flex-col justify-between items-center p-6 text-white">
       
       {/* Top Header Section */}
       <div className="w-full max-w-md pt-8 text-center">
         <h1 className="text-3xl font-extrabold tracking-tight text-white mb-2">
           HVAC Service Portal
         </h1>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-200">
           Manage customer calls, equipment status, and service tickets.
         </p>
       </div>
@@ -44,7 +44,7 @@ function Login({ onLogin }) {
       </div>
 
       {/* Footer */}
-      <div className="text-center text-xs text-slate-600 pb-2">
+      <div className="text-center text-xs text-slate-400 pb-2">
         <p>© HVAC Service Portal</p>
       </div>
 
