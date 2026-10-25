@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import ServiceTickets from './pages/ServiceTickets';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
@@ -9,22 +10,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div
-        style={{
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: '20px',
-          fontFamily: 'Arial, sans-serif',
-          color: '#333',
-          maxWidth: '600px',
-          margin: '0 auto',
-          boxSizing: 'border-box'
-        }}
-      >
+      {/* Removed the 600px width constraint so full-screen pages can stretch edge-to-edge */}
+      <div className="min-h-screen flex flex-col justify-between bg-slate-950 text-white w-full">
 
-        <main>
+        <main className="w-full flex-grow">
           <Routes>
 
             {/* Login Page */}
@@ -34,6 +23,14 @@ function App() {
                 <Login
                   onLogin={(tech) => setCurrentTech(tech)}
                 />
+              }
+            />
+
+            {/* Home Page */}
+            <Route
+              path="/home"
+              element={
+                <HomePage currentTech={currentTech} />
               }
             />
 
@@ -51,14 +48,7 @@ function App() {
           </Routes>
         </main>
 
-        <footer
-          style={{
-            marginTop: '30px',
-            color: '#777',
-            fontSize: '14px',
-            textAlign: 'center'
-          }}
-        >
+        <footer className="py-4 text-center text-slate-500 text-xs">
           <p>© HVAC Service Portal</p>
         </footer>
 
