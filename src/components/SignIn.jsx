@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const AUTHORIZED_TECHS = [
-    { id: '1129', name: 'Shawn Lawson' },
-    { id: '1220', name: 'Heather Lawson' },
-    { id: '1105', name: 'Ethan Lawson' },
-    { id: '0924', name: 'Autumn Lawson' },
-    { id: '0612', name: 'Paislee Lawson' },
-    { id: '0214', name: 'Thayer Lawson' }
+    { id: '1129', name: 'Shawn Lawson', role: 'supervisor'},
+    { id: '1220', name: 'Heather Lawson', role: 'manager'},
+    { id: '1105', name: 'Ethan Lawson', role: 'tech'},
+    { id: '0924', name: 'Autumn Lawson', role: 'tech' },
+    { id: '0612', name: 'Paislee Lawson', role: 'tech' },
+    { id: '0214', name: 'Thayer Lawson', role: 'tech' }
 ];
 
 function SignIn({ onLogin }) {
