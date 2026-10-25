@@ -34,7 +34,7 @@
   .portal-logo {
     width: 80%;
     max-width: 280px;
-    margin: 16px auto 16px auto; /* 👈 Keeps 'auto' left/right centering active on mobile */
+    margin: 16px auto 16px auto; /* Keeps 'auto' left/right centering active on mobile */
   }
 
   h1 {

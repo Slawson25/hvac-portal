@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import ServiceTickets from './pages/ServiceTickets';
-import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
@@ -10,27 +10,26 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* Removed the 600px width constraint so full-screen pages can stretch edge-to-edge */}
       <div className="min-h-screen flex flex-col justify-between bg-slate-950 text-white w-full">
 
         <main className="w-full flex-grow">
           <Routes>
 
-            {/* Login Page */}
+            {/* Home Page is now the main landing page at root */}
             <Route
               path="/"
+              element={
+                <HomePage currentTech={currentTech} />
+              }
+            />
+
+            {/* Login Page moved to /login */}
+            <Route
+              path="/login"
               element={
                 <Login
                   onLogin={(tech) => setCurrentTech(tech)}
                 />
-              }
-            />
-
-            {/* Home Page */}
-            <Route
-              path="/home"
-              element={
-                <HomePage currentTech={currentTech} />
               }
             />
 
