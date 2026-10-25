@@ -5,11 +5,6 @@ import ServiceCard from '../components/ServiceCard';
 function ServiceTickets({ currentTech, onSignOut }) {
   const navigate = useNavigate();
 
-  // Redirect to login if someone accesses /tickets directly without logging in
-  if (!currentTech) {
-    navigate('/login');
-    return null;
-  }
 
   const handleSignOut = () => {
     onSignOut();
