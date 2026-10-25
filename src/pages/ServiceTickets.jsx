@@ -23,7 +23,7 @@ function ServiceTickets({ currentTech, onSignOut }) {
       customer: 'Acme Corp',
       unitType: 'Goodman 4-Ton Split System',
       issue: 'No cooling - R-410A Leak Detected',
-      status: 'Pending',
+      status: 'Completed',
       assignedTechId: '1129'
     },
     {
